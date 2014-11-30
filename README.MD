@@ -87,7 +87,10 @@ BabushkaText is a single Java file, so you can simply download it and reference 
 
 Download `BabushkaText.java` here:  **[BabushkaText](https://github.com/quiqueqs/BabushkaText/blob/master/babushkatext/src/main/java/babushkatext/BabushkaText.java)**
 
-### Contact Me
+Or if you prefer, you can simply download **[the JAR](https://github.com/quiqueqs/BabushkaText/tree/master/downloads/babushka-0.1.jar)**
+
+Contact Me
+--------
 If you find any **bugs** or have a **problem** while using this library, please [open an issue](https://github.com/quiqueqs/BabushkaText/issues/new) in this repo (or a pull request :)).
 
 License
