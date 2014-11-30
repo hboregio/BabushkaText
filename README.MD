@@ -1,15 +1,18 @@
-Butter Knife
+BabushkaText
 ============
 
-BabushkaText is a TextView which lets you customize the styling of parts of your text via Spannables,
-but without the hassle of having to deal directly with Spannable themselves.
+BabushkaText is a custom `TextView` which lets you customize the styling of parts of your text via
+`Spannables`, but without the hassle of having to deal directly with Spannable themselves.
 
  * Create complex style structures for your text without having to add multiple `TextViews` to your
  view hierarchy.
  * Eliminate `setSpan(Object what, int start, int end, int flags)` calls by using more convenient
  methods such as `.style(Typeface.BOLD)`, `.superscript()` and others.
 
+What can I do with BabushkaText?
+--------
 Examples of what you can do with BabushkaText. Each item is a single TextView.
+
 ![Logo](images/example.png)
 
 Example
@@ -18,7 +21,7 @@ Generate the following style:
 
 ![NewY York](images/newyork.png)
 
-With this code:
+With the code below:
 
 ```java
         BabushkaText babushka = (BabushkaText)findViewById(R.id.babushka_text);
