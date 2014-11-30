@@ -11,7 +11,7 @@ BabushkaText is a custom `TextView` which lets you customize the styling of part
 
 What can I do with BabushkaText?
 --------
-Examples of what you can do with BabushkaText. Each item is a single TextView.
+Examples of different styles. Each one is a **single** TextView.
 
 ![Logo](images/example.png)
 
@@ -45,6 +45,40 @@ With the code below:
 
         // Display the final, styled text
         babushka.display();
+```
+
+What kind of styles can I add?
+--------
+Right now you can customize the style of your text by using the following methods, which internally
+get converted to the corresponding `Spannables`
+
+| Babushka Method        | Internal Span           |
+| ------------- |:-------------:|
+| textSize      | AbsoluteSizeSpan |
+| textColor      | ForegroundColorSpan      |
+| textSizeRelative | RelativeSizeSpan      |
+| backgroundColor | BackgroundColorSpan      |
+| style | StyleSpan      |
+| underline | UnderlineSpan      |
+| strike | StrikethroughSpan      |
+| superscript | SuperscriptSpan      |
+| subscript | SubscriptSpan      |
+
+What else can I do?
+--------
+Once you've created and displayed your BabushkaText, you can modify the text contents of each
+`Piece` individually. For example, if we want to change the `1.2 mi` from the above example into
+`1.9 km`, we could do the following:
+
+```java
+// grab the Piece at position 1
+Piece piece = babushka.getPiece(1);
+
+// modify it's text
+piece.setText("1.9 km ");
+
+// you must always call display after you alter a Piece's text
+babushka.display();
 ```
 
 Download
