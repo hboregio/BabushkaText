@@ -85,6 +85,8 @@ Download
 --------
 BabushkaText is a single Java file, so you can simply download it and reference it in your project.
 
+Download `BabushkaText.java` here:  **[BabushkaText](https://github.com/quiqueqs/BabushkaText/blob/master/babushkatext/src/main/java/babushkatext/BabushkaText.java)**
+
 License
 -------
 
