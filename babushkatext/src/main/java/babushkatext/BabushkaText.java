@@ -217,6 +217,16 @@ public class BabushkaText extends TextView {
     }
 
     /**
+    * Change text color of all pieces of textview.
+    */
+    public void changeTextColor(int textColor) {
+        for (Piece mPiece : mPieces) {
+            mPiece.setTextColor(textColor);
+        }
+        display();
+    }
+
+    /**
      * A Piece represents a part of the text that you want to style. Say for example you want this
      * BabushkaText to display "Hello World" such that "Hello" is displayed in Bold and "World" is
      * displayed in Italics. Since these have different styles, they are both separate Pieces.
@@ -227,8 +237,8 @@ public class BabushkaText extends TextView {
     public static class Piece {
 
         private String text;
+        private int textColor;
         private final int textSize;
-        private final int textColor;
         private final int backgroundColor;
         private final float textSizeRelative;
         private final int style;
@@ -262,6 +272,20 @@ public class BabushkaText extends TextView {
         public void setText(String text) {
             this.text = text;
         }
+
+
+        /**
+         * Sets the text color of this Piece. If you're creating a new Piece, you should do so using it's
+         * {@link babushkatext.BabushkaText.Piece.Builder}.
+         *
+         * Use this method if you want to change the text color of an existing Piece that is already
+         * displayed. After doing so, you MUST call {@code display()} for the changes to show up.
+         *
+         * @param color of text (it is NOT android Color resources ID, use getResources().getColor(R.color.colorId) for it)
+         */
+		public void setTextColor(int textColor) {
+        	this.textColor = textColor;
+    	}
 
         /**
          * Builder of Pieces
